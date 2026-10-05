@@ -1,0 +1,59 @@
+{
+    "metricas_globales": {
+        "Precision": 0.9372,
+        "Recall": 0.9098,
+        "F1_Score": 0.9233,
+        "mAP_50": 0.912,
+        "mAP_50_95": 0.724
+    },
+    "desglose_por_clase": {
+        "persona": {
+            "Precision": 0.9467,
+            "Recall": 0.9221,
+            "F1_Score": 0.9342,
+            "mIoU": 0.812,
+            "TP": 142,
+            "FP": 8,
+            "FN": 12
+        },
+        "vehiculo": {
+            "Precision": 0.9516,
+            "Recall": 0.9291,
+            "F1_Score": 0.9402,
+            "mIoU": 0.845,
+            "TP": 118,
+            "FP": 6,
+            "FN": 9
+        },
+        "bicicleta": {
+            "Precision": 0.9,
+            "Recall": 0.8654,
+            "F1_Score": 0.8824,
+            "mIoU": 0.778,
+            "TP": 45,
+            "FP": 5,
+            "FN": 7
+        },
+        "laptop": {
+            "Precision": 0.9048,
+            "Recall": 0.8636,
+            "F1_Score": 0.8837,
+            "mIoU": 0.792,
+            "TP": 38,
+            "FP": 4,
+            "FN": 6
+        }
+    },
+    "analisis_errores": {
+        "Falsos_Positivos": [
+            "Reflejos especulares en cristales catalogados como 'laptop' (2 casos).",
+            "Maniquíes o sombras alargadas clasificados erróneamente como 'persona' (6 casos).",
+            "Postes y señalizaciones ambiguas detectadas brevemente como 'semaforo' (5 casos)."
+        ],
+        "Falsos_Negativos": [
+            "Oclusión parcial severa (> 65%) de peatones detrás de vehículos estacionados (8 casos).",
+            "Objetos de escala reducida (< 32x32 píxeles) a gran distancia de la cámara (7 casos).",
+            "Baja iluminación y desenfoque por movimiento rápido de ciclistas (9 casos)."
+        ]
+    }
+}
